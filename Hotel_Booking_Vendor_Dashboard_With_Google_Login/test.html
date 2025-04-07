@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Screen Width Display</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        /* Mobile */
+@media (max-width: 480px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+/* Tablets */
+@media (min-width: 500px) and (max-width: 1024px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+/* Laptops & Desktops */
+@media (min-width: 1025px) {
+  body {
+    background-color: lightgray;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+    <h1 id="screenWidth"></h1>
+
+    <script>
+        function updateScreenWidth() {
+            document.getElementById("screenWidth").textContent = `Screen Width: ${window.innerWidth}px`;
+        }
+
+        // Call function on load
+        updateScreenWidth();
+
+        // Update on window resize
+        window.addEventListener("resize", updateScreenWidth);
+    </script>
+
+</body>
+</html>

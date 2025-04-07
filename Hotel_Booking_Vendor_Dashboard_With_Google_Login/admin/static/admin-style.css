@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #FDFBEE;
+}
+
+button {
+    width: 140px;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 15px;
+    font-size: large;
+    background-color: #FFEDFA;
+    transition: 0.5s ease-in-out;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    scale: 1.1;
+    transition: 0.5s ease-in-out;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    background-color: #ADB2D4;
+    display: flex;
+    width: 100%;
+    height: 7.5vh;
+    position: fixed;
+    top: 0;
+}
+
+nav h1 {
+    margin: 0;
+    margin-top: 0px;
+    font-size: 35px;
+}
+
+nav .logo {
+    /* background-color: red; */
+    width: 20%;
+    text-align: center;
+}
+
+nav .logout-btn {
+    /* background-color: black; */
+    width: 10%;
+    margin-left: 65%;
+    text-align: center;
+
+}
+
+nav .logout-btn button {
+    margin-top: 8px;
+}
+
+.sidebar {
+    /* background-color: red; */
+    width: 20%;
+    height: 86vh;
+    position: fixed;
+    top: 7.5vh;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding-bottom: 50px;
+}
+
+.sidebar .profile {
+    text-align: center;
+}
+
+.sidebar .profile h2 {
+    margin: 15px 0 15px 0;
+}
+
+.sidebar .profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 30px;
+    box-shadow: 0 0 10px;
+
+}
+
+.sidebar .sidebar-container {
+    /* background-color: blue; */
+    padding: 15px 0;
+}
+
+/* .sidebar .sidebar-container li{
+    background-color: #ADB2D4;
+    margin: 10px 0;
+    padding: 15px 15px 15px 45px;
+    font-size: large;
+} */
+
+.sidebar .sidebar-container .menu-item {
+    /* background-color: #ADB2D4; */
+    margin: 10px 0;
+    padding: 15px 0px 15px 25px;
+    font-size: large;
+
+}
+
+.sidebar .sidebar-container .menu-item:hover {
+    background-color: #ADB2D4;
+    cursor: pointer;
+}
+
+.sidebar .sidebar-container .sub-menu {
+    /* background-color: red; */
+    width: 80%;
+    margin: 0;
+    /* padding: 10px; */
+    margin-left: 20%;
+    display: none;
+}
+
+.sidebar .sidebar-container .sub-menu li {
+    /* background-color: #ADB2D4; */
+    margin: 10px 0;
+    padding: 10px;
+}
+
+.sidebar .sidebar-container .sub-menu li:hover {
+    background-color: #ADB2D4;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #ADB2D4;
+}
+
+.main-container {
+    width: 80%;
+    height: 90vh;
+    position: fixed;
+    top: 7.5vh;
+    left: 20%;
+    /* background-color: red; */
+    overflow: scroll;
+    /* scrollbar-width: none; */
+    padding-bottom: 15px;
+}
+
+.main-container .dashboard-container {
+    width: 100%;
+    height: 95%;
+    /* background-color: #ADB2D4; */
+    /* margin-top: 15px; */
+    padding-top: 20px;
+    /* display: none; */
+
+}
+
+.main-container .dashboard-container h1 {
+    margin: 0;
+    /* background-color: ; */
+    width: 90%;
+    margin-left: 2%;
+    padding: 8px;
+    padding-left: 45px;
+    border-radius: 15px 15px 0 0;
+}
+
+.main-container .dashboard-container .sub-container {
+    /* background-color: red; */
+    width: 90%;
+    /* height: 100%; */
+    margin-left: 2%;
+    padding: 26px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+
+
+}
+
+.main-container .dashboard-container .sub-container div {
+    /* background-color: yellow; */
+    height: 150px;
+    box-shadow: 0 0 10px rgb(243, 235, 235);
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+}
+
+.main-container .addVendor-container {
+    width: 100%;
+    height: 75%;
+    /* background-color: red; */
+    /* display: none; */
+
+    h1 {
+        font-size: 30px;
+        margin: 15px 0;
+    }
+
+    .subContainer {
+        height: 100%;
+    }
+}
+
+.main-container .addVendor-container .subContainer .steps-nav {
+    /* background-color: red; */
+    height: 60px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.main-container .addVendor-container .subContainer .steps-nav #step1 {
+    position: absolute;
+    top: 1%;
+    border: 2px dashed;
+    width: 26%;
+    left: 11%;
+
+}
+
+.main-container .addVendor-container .subContainer .steps-nav #step2 {
+    position: absolute;
+    top: 1%;
+    border: 2px dashed;
+    width: 26%;
+    left: 50%;
+
+}
+
+.main-container .addVendor-container .subContainer .steps-nav span {
+    margin-left: 20px;
+    border: 1px solid;
+    padding: 20px 30px;
+    border-radius: 50%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.main-container .addVendor-container .subContainer .steps-nav span:nth-child(4) {
+    background-color: blue;
+    /* border: none; */
+    margin-left: 30%;
+
+}
+
+.main-container .addVendor-container .subContainer .steps-nav span:nth-child(3) {
+    /* background-color: blue; */
+    /* border: none; */
+    margin-left: 31%;
+
+}
+
+.main-container .addVendor-container .subContainer .steps-nav .step3 {
+    margin-left: 30%;
+}
+
+.backColor {
+    background-color: rgb(153, 153, 228);
+    color: white;
+    box-shadow: 0 0 5px rgb(206, 182, 182);
+}
+
+.line {
+    color: rgb(153, 153, 228);
+}
+
+.main-container .addVendor-container .subContainer .steps-container {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    scrollbar-width: none;
+    padding: 15px 0;
+    padding-bottom: 80px;
+    /* background-color: blue; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    /* margin-left: 20%; */
+    /* display: flex; */
+}
+
+.main-container .addVendor-container .subContainer .steps-container .form-container {
+    width: 36%;
+    margin-left: 26%;
+    /* height: 75%; */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(170, 155, 155);
+    background-color: #EAEAEA;
+    overflow: scroll;
+    scrollbar-width: none;
+    /* display: none; */
+}
+
+.main-container .addVendor-container .subContainer .steps-container .form-container h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* .main-container .addVendor-container .subContainer .steps-container .form-container form{
+    border: 1px solid;
+} */
+.main-container .addVendor-container .subContainer .steps-container .form-container form .form-group {
+    /* background-color: yellow; */
+    margin: 10px 0;
+
+    textarea {
+        margin: 10px 0;
+    }
+}
+
+.main-container .addVendor-container .subContainer .steps-container .form-container form .form-group input {
+    width: 97%;
+    height: 22px;
+    padding: 5px;
+    margin: 10px 0;
+    border: none;
+}
+
+.main-container .addVendor-container .subContainer .steps-container .form-container form .form-group button {
+    background-color: black;
+    color: white;
+}
+
+.main-container .addVendor-container .subContainer .steps-container .form-container form .form-group button:hover {
+    background-color: #ADB2D4;
+    color: black;
+}
+
+
+
+
+.hidden {
+    display: none;
+}
+
+.main-container .manage-vendor {
+    width: 100%;
+    height: 97%;
+    /* background-color: red; */
+    /* margin-top: 10px; */
+    padding-top: 20px;
+    /* display: none; */
+}
+.main-container .manage-vendor h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-bottom: 15px;
+    background-color: #ADB2D4;
+    width: 90%;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 50px;
+    border-radius: 15px 15px 0 0;
+}
+.main-container .manage-vendor table{
+    /* border: 1px solid; */
+    width: 94%;
+    margin-left: 2.6%;
+    
+}
+.main-container .manage-vendor table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.main-container .manage-vendor table th{
+    height: 30px;
+    background-color: #ADB2D4;
+    
+}
+
+.main-container .view-vendor {
+    width: 100%;
+    height: 97%;
+    /* background-color: red; */
+    /* margin-top: 10px; */
+    padding-top: 20px;
+    /* display: none; */
+}
+.main-container .view-vendor h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-bottom: 15px;
+    background-color: #ADB2D4;
+    width: 90%;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 50px;
+    border-radius: 15px 15px 0 0;
+}
+.main-container .view-vendor table{
+    /* border: 1px solid; */
+    width: 94%;
+    margin-left: 2.6%;
+    
+}
+.main-container .view-vendor table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.main-container .view-vendor table th{
+    height: 30px;
+    background-color: #ADB2D4;
+    
+}
+
+.main-container .manage-users {
+    width: 100%;
+    height: 97%;
+    /* background-color: red; */
+    /* margin-top: 10px; */
+    padding-top: 20px;
+    /* display: none; */
+}
+.main-container .manage-users h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-bottom: 15px;
+    background-color: #ADB2D4;
+    width: 90%;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 50px;
+    border-radius: 15px 15px 0 0;
+}
+.main-container .manage-users table{
+    /* border: 1px solid; */
+    width: 94%;
+    margin-left: 2.6%;
+    
+}
+.main-container .manage-users table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.main-container .manage-users table th{
+    height: 30px;
+    background-color: #ADB2D4;
+    
+}
+.main-container .view-users {
+    width: 100%;
+    height: 97%;
+    /* background-color: red; */
+    /* margin-top: 10px; */
+    padding-top: 20px;
+    /* display: none; */
+}
+.main-container .view-users h1{
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 2.5%;
+    margin-bottom: 15px;
+    background-color: #ADB2D4;
+    width: 90%;
+    height: 45px;
+    padding-top: 5px;
+    padding-left: 50px;
+    border-radius: 15px 15px 0 0;
+}
+.main-container .view-users table{
+    /* border: 1px solid; */
+    width: 94%;
+    margin-left: 2.6%;
+    
+}
+.main-container .view-users table,th,td{
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.main-container .view-users table th{
+    height: 30px;
+    background-color: #ADB2D4;
+    
+}
+
+.main-container .add-users{
+    width: 100%;
+    height: 97%;
+    /* background-color: red; */
+    /* margin-top: 10px; */
+    padding-top: 20px;
+    /* display: none; */
+}
+.main-container .add-users h1{
+    font-size: 35px;
+    margin: 0;
+    margin-left: 45px;
+    /* background-color: red; */
+    width: 70%;
+}
+.main-container .add-users .form-container{
+    width: 36%;
+    margin-top: 60px;
+    margin-left: 26%;
+    /* height: 75%; */
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgb(170, 155, 155);
+    background-color: #EAEAEA;
+    overflow: scroll;
+    scrollbar-width: none;
+    
+}
+.main-container .add-users .form-container h1{
+    text-align: center;
+    margin-top: 10px;
+}
+.main-container .add-users .form-container form .form-group{
+    margin: 10px 0;
+}
+.main-container .add-users .form-container form .form-group input{
+    width: 97%;
+    height: 22px;
+    padding: 5px;
+    margin: 10px 0;
+    border: none;
+}
+.main-container .add-users .form-container form .form-group select {
+    width: 99%;
+    padding: 8px 10px;
+    margin: 10px 0px;
+    background-color: white;
+    border: none;
+    margin-bottom: 25px;
+}
+
+.main-container .add-users .form-container form .form-group button {
+    background-color: black;
+    color: white;
+}
+
+.main-container .add-users .form-container form .form-group button:hover {
+    background-color: #ADB2D4;
+    color: black;
+}

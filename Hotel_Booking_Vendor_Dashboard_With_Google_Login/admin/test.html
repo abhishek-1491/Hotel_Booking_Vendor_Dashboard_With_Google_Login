@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://kit.fontawesome.com/35821647e0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="admin-style.css">
+
+    <style>
+        .slider {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .steps-container {
+            width: 100%;
+            
+            height: 100%;
+            flex: 0 0 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            position: absolute;
+            /* transform: scale(0.5); */
+            transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+            .form-container{
+                margin-top: 450px;
+                
+            }
+        }
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Admin NavBar -->
+    <nav>
+        <div class="logo">
+            <h1>King <i class="fa-regular fa-chess-king" style="color: red; filter: drop-shadow(0 0 5px aqua);"></i>
+                Hotel</h1>
+        </div>
+        <div class="logout-btn">
+            <button>Logout</button>
+        </div>
+    </nav>
+
+    <!-- Admin Sidebar -->
+
+    <section class="sidebar">
+        <div class="profile">
+            <img src="../images/back.jpg" alt="">
+            <h2>Name of user</h2>
+        </div>
+        <div class="sidebar-container">
+            <div class="menu-item active" onclick="toggleSubmenu('dashboard')">Dashboard</div>
+            <div class="menu-item" onclick="toggleSubmenu('submenu1')">Vendors</div>
+            <div class="sub-menu" id="submenu1">
+                <li>Add Vendor</li>
+                <li>Manage Vendor</li>
+                <li>View Vendors</li>
+            </div>
+            <div class="menu-item" onclick="toggleSubmenu('submenu2')">Users</div>
+            <div class="sub-menu" id="submenu2">
+                <li>Add User</li>
+                <li>Manage User</li>
+                <li>View Users</li>
+            </div>
+            <div class="menu-item" onclick="toggleSubmenu('submenu3')">Financials</div>
+            <div class="sub-menu" id="submenu3">
+                <li>Dispute</li>
+                <li>Refunds</li>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- main container -->
+
+    <section class="main-container">
+
+
+        <!-- dashboard container -->
+        <div class="dashboard-container" id="dashboard">
+            <h1>Admin Dashboard</h1>
+            <div class="sub-container">
+                <div>A</div>
+                <div>B</div>
+                <div>C</div>
+                <div>D</div>
+                <div>E</div>
+            </div>
+        </div>
+
+
+        <!-- Vendor container -->
+        <div class="addVendor-container" id="addVendor">
+
+            <div class="subContainer">
+                <!-- <form action="">
+                    <div class="form-group">
+                        <label for="">Enter Owner Name</label>
+                        <input type="text" name="Owner_Name" placeholder="Enter Owner Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Enter Owner Contact</label>
+                        <input type="number" name="Owner_mobile" placeholder="Enter Owner Contact">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Enter Owner Email</label>
+                        <input type="email" name="Owner_email" placeholder="Enter Owner Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Enter Hotel Name</label>
+                        <input type="text" name="hotel_Name" placeholder="Enter Hotel Name">
+                    </div>
+                    <label for=""><b>Enter Contact Person Details</b></label><br>
+                    <div class="form-group">
+                        <label for="">Contact Person Name</label>
+                        <input type="text" name="contactP_Name" placeholder="Enter Contact Person Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Contact Person Mobile</label>
+                        <input type="text" name="contactP_mobile" placeholder="Enter Contact Person Mobile">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Contact Person Email</label>
+                        <input type="text" name="contactP_email" placeholder="Enter Contact Person Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="password" placeholder="Enter Password">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Password</label>
+                        <input type="password" name="cnfpassword" placeholder="Enter Confirm Password">
+                    </div>
+                    <input type="text" name="vendor" hidden>
+
+                    <div class="form-group">
+                        <button>Add Vendor</button>
+                    </div>
+                </form>  -->
+
+                <div class="steps-nav">
+                    <span class="step1 backColor">1</span>
+                    <hr class="" id="step1">
+                    <span class="step2 ">2</span>
+                    <hr id="step2">
+                    <span class="step3 ">3</span>
+                </div>
+                <div class="slider">
+                    <div class="steps-container slide">
+
+                        <!-- Step 1 form (Hotel Details)-->
+                        <div class="form-container">
+                            <h1>Enter Hotel Details</h1>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for=""> Hotel Name</label>
+                                    <input type="text" name="hotel_name" placeholder="Enter Hotel Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Hotel Location</label>
+                                    <input type="text" name="hotel_location" placeholder="Enter Hotel Location">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">Total Rooms</label>
+                                    <input type="text" name="hotel_rooms" placeholder="Enter Total Rooms">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Room Type</label>
+                                    <input type="text" name="room_type" placeholder="Enter Room Type">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Room Price</label>
+                                    <input type="text" name="Room_Price" placeholder="Enter Room Price">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Hotel Amenities</label><br>
+
+                                    <textarea name="" id="" cols="56" rows="5" name="hotel_amenities"
+                                        placeholder="Enter Hotel Amenities"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <button>Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Step 2 form (Owner Details)-->
+                    <div class="steps-container slide">
+                        <div class="form-container">
+                            <h1>Enter Owner Details</h1>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for=""> Name</label>
+                                    <input type="text" name="owner_name" placeholder="Enter Owner Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Address</label>
+                                    <input type="text" name="owner_address" placeholder="Enter Owner Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Contact</label>
+                                    <input type="number" name="owner_mobile" placeholder="Enter Owner Contact">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Email</label>
+                                    <input type="email" name="owner_email" placeholder="Enter Owner Email">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Password</label>
+                                    <input type="password" name="password" placeholder="Enter Password">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="role" value="vendor" hidden>
+                                </div>
+
+                                <div class="form-group">
+                                    <button>Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 form (Manager Details) -->
+                    <div class="steps-container slide">
+                        <div class="form-container">
+                            <h1>Enter Manager Details</h1>
+                            <form action="">
+                                <div class="form-group">
+                                    <label for=""> Name</label>
+                                    <input type="text" name="manager_name" placeholder="Enter Manager Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Address</label>
+                                    <input type="text" name="manager_address" placeholder="Enter Manager Address">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Contact</label>
+                                    <input type="number" name="manager_mobile" placeholder="Enter Manager Contact">
+                                </div>
+                                <div class="form-group">
+                                    <label for=""> Email</label>
+                                    <input type="email" name="manager_email" placeholder="Enter Manager Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="role" value="vendor" hidden>
+                                </div>
+
+                                <div class="form-group">
+                                    <button>Next</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+<script>
+    function toggleSubmenu(id) {
+        console.log(id);
+        if (id == "dashboard") {
+            document.querySelectorAll('.sub-menu').forEach(sub => sub.style.display = 'none');
+        }
+        else {
+            const submenu = document.getElementById(id);
+            const isVisible = submenu.style.display === 'block';
+            document.querySelectorAll('.sub-menu').forEach(sub => sub.style.display = 'none');
+            submenu.style.display = isVisible ? 'none' : 'block';
+        }
+
+        document.querySelectorAll('.menu-item').forEach(sub => sub.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+    }
+
+
+    let currentIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+        
+        function nextSlide() {
+            slides[currentIndex].classList.remove("active");
+            currentIndex = (currentIndex + 1) % slides.length;
+            slides[currentIndex].classList.add("active");
+        }
+        
+        setInterval(nextSlide, 3000);
+</script>
+
+</html>
